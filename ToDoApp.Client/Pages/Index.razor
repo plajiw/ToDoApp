@@ -1,0 +1,229 @@
+﻿@page "/"
+@inject HttpClient Http
+
+<div class="todo-container">
+    <h2>Lista de Tarefas</h2>
+
+    <!-- Formulário para adicionar novas tarefas -->
+    <TaskForm AddTask="AddTask" />
+
+    <!-- Lista de tarefas -->
+    <TaskList Tasks="TodoItems" UpdateTask="SaveEdit" DeleteTask="DeleteTodo" />
+
+    <!-- Mensagem de Sucesso -->
+    @if (!string.IsNullOrEmpty(SuccessMessage))
+    {
+        <div class="alert alert-success mt-2">@SuccessMessage</div>
+    }
+
+    <!-- Mensagem de Erro -->
+    @if (!string.IsNullOrEmpty(ErrorMessage))
+    {
+        <div class="alert alert-danger mt-2">@ErrorMessage</div>
+    }
+</div>
+
+<style>
+    .todo-container {
+        margin: 20px auto;
+        max-width: 400px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+        .todo-container h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+    .form-group {
+        display: flex;
+        gap: 10px;
+    }
+
+    .task-input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .btn-add {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .task-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .task-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background-color: #fff;
+        transition: transform 0.2s ease;
+    }
+
+        .task-item:hover {
+            transform: scale(1.02);
+            background-color: #f5f5f5;
+        }
+
+    .btn-sm {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+</style>
+
+@code {
+    // Lista principal de tarefas
+    private List<TodoItem> TodoItems = new();
+
+    // Mensagens de feedback para o usuário
+    private string? SuccessMessage;
+    private string? ErrorMessage;
+
+    /// <summary>
+    /// Método que é chamado ao carregar/inicializar o componente.
+    /// Carrega as tarefas do servidor e limpa mensagens de sucesso/erro iniciais.
+    /// </summary>
+    protected override async Task OnInitializedAsync()
+    {
+        // Limpa mensagens antigas para garantir que não apareçam antes de qualquer ação
+        SuccessMessage = null;
+        ErrorMessage = null;
+
+        try
+        {
+            // Tenta carregar as tarefas
+            TodoItems = await Http.GetFromJsonAsync<List<TodoItem>>("todo");
+
+            // Se chegar até aqui, significa que as tarefas foram carregadas com sucesso,
+            // e não há mensagem de erro a exibir. Deixamos SuccessMessage e ErrorMessage como null.
+        }
+        catch (Exception ex)
+        {
+            // Se ocorrer um problema ao carregar, exibimos como mensagem de erro
+            ErrorMessage = $"Erro ao carregar tarefas: {ex.Message}";
+        }
+    }
+
+    /// <summary>
+    /// Adiciona uma nova tarefa chamando o endpoint POST.
+    /// Define mensagem de sucesso em caso de êxito, ou mensagem de erro em caso de falha.
+    /// </summary>
+    private async Task AddTask(string title)
+    {
+        // Limpa mensagens anteriores de sucesso/erro
+        SuccessMessage = null;
+        ErrorMessage = null;
+
+        try
+        {
+            var newItem = new TodoItem { Title = title, IsCompleted = false };
+            var response = await Http.PostAsJsonAsync("todo", newItem);
+
+            if (response.IsSuccessStatusCode)
+            {
+                // Lê o objeto criado que o servidor retorna (com ID atualizado)
+                var createdItem = await response.Content.ReadFromJsonAsync<TodoItem>();
+                if (createdItem != null)
+                {
+                    // Adiciona na lista local
+                    TodoItems.Add(createdItem);
+                    // Exibe mensagem de sucesso para o usuário
+                    SuccessMessage = "Tarefa adicionada com sucesso!";
+                }
+            }
+            else
+            {
+                // Se o servidor não retornou StatusCode 2xx, exibimos mensagem de erro
+                ErrorMessage = "Erro ao adicionar tarefa. Verifique os dados e tente novamente.";
+            }
+        }
+        catch (Exception ex)
+        {
+            // Exibe mensagem de erro contendo detalhes do problema
+            ErrorMessage = $"Erro ao adicionar tarefa: {ex.Message}";
+        }
+    }
+
+    /// <summary>
+    /// Atualiza uma tarefa existente chamando o endpoint PUT.
+    /// Em caso de sucesso, exibe mensagem; em caso de falha, exibe erro.
+    /// </summary>
+    private async Task SaveEdit(TodoItem task)
+    {
+        // Limpa mensagens anteriores
+        SuccessMessage = null;
+        ErrorMessage = null;
+
+        try
+        {
+            var response = await Http.PutAsJsonAsync($"todo/{task.Id}", task);
+            if (response.IsSuccessStatusCode)
+            {
+                SuccessMessage = "Tarefa atualizada com sucesso!";
+            }
+            else
+            {
+                ErrorMessage = "Erro ao atualizar a tarefa. Verifique os dados e tente novamente.";
+            }
+        }
+        catch (Exception ex)
+        {
+            ErrorMessage = $"Erro ao atualizar tarefa: {ex.Message}";
+        }
+    }
+
+    /// <summary>
+    /// Remove (exclui) uma tarefa chamando o endpoint DELETE.
+    /// Em caso de sucesso, remove do estado local; em falha, exibe mensagem de erro.
+    /// </summary>
+    private async Task DeleteTodo(int id)
+    {
+        // Limpa mensagens anteriores
+        SuccessMessage = null;
+        ErrorMessage = null;
+
+        try
+        {
+            var response = await Http.DeleteAsync($"todo/{id}");
+            if (response.IsSuccessStatusCode)
+            {
+                // Remove a tarefa da lista local
+                TodoItems = TodoItems.Where(t => t.Id != id).ToList();
+                SuccessMessage = "Tarefa excluída com sucesso!";
+            }
+            else
+            {
+                ErrorMessage = "Erro ao excluir a tarefa. Verifique os dados e tente novamente.";
+            }
+        }
+        catch (Exception ex)
+        {
+            ErrorMessage = $"Erro ao excluir tarefa: {ex.Message}";
+        }
+    }
+
+    /// <summary>
+    /// Modelo de dados que representa a Tarefa.
+    /// </summary>
+    public class TodoItem
+    {
+        public int Id { get; set; }
+        public required string Title { get; set; }
+        public bool IsCompleted { get; set; }
+    }
+}

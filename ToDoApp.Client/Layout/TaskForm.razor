@@ -1,0 +1,36 @@
+﻿@using ToDoApp.Client.Pages
+
+<div class="form-group">
+    <input class="form-control task-input" @bind="NewTaskTitle" placeholder="Adicione uma nova tarefa..." />
+    <button class="btn btn-primary btn-add" @onclick="OnAddTask">Adicionar</button>
+</div>
+
+@if (!string.IsNullOrEmpty(ErrorMessage))
+{
+    <div class="alert alert-danger mt-2">@ErrorMessage</div>
+}
+
+@code {
+    // Evento que será chamado quando uma tarefa for adicionada
+    [Parameter] public EventCallback<string> AddTask { get; set; }
+
+    private string NewTaskTitle = string.Empty;
+    private string? ErrorMessage;
+
+    /// <summary>
+    /// Método chamado quando o botão "Adicionar" é clicado.
+    /// Verifica se o título não está vazio e então chama o evento `AddTask`.
+    /// </summary>
+    private async Task OnAddTask()
+    {
+        if (string.IsNullOrWhiteSpace(NewTaskTitle))
+        {
+            ErrorMessage = "O título da tarefa não pode estar vazio.";
+            return;
+        }
+
+        await AddTask.InvokeAsync(NewTaskTitle);
+        NewTaskTitle = string.Empty;
+        ErrorMessage = null;
+    }
+}

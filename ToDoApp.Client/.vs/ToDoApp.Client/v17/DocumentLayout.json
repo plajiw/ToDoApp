@@ -1,0 +1,189 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\User\\Pablo\\Documentos\\Github\\ToDoApp\\ToDoApp.Client\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2A3EF2AA-D5FB-4191-B195-EF15793F4359}|ToDoApp.Client.csproj|d:\\user\\pablo\\documentos\\github\\todoapp\\todoapp.client\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2A3EF2AA-D5FB-4191-B195-EF15793F4359}|ToDoApp.Client.csproj|solutionrelative:pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A3EF2AA-D5FB-4191-B195-EF15793F4359}|ToDoApp.Client.csproj|d:\\user\\pablo\\documentos\\github\\todoapp\\todoapp.client\\layout\\taskform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2A3EF2AA-D5FB-4191-B195-EF15793F4359}|ToDoApp.Client.csproj|solutionrelative:layout\\taskform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A3EF2AA-D5FB-4191-B195-EF15793F4359}|ToDoApp.Client.csproj|d:\\user\\pablo\\documentos\\github\\todoapp\\todoapp.client\\layout\\taskitem.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2A3EF2AA-D5FB-4191-B195-EF15793F4359}|ToDoApp.Client.csproj|solutionrelative:layout\\taskitem.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A3EF2AA-D5FB-4191-B195-EF15793F4359}|ToDoApp.Client.csproj|d:\\user\\pablo\\documentos\\github\\todoapp\\todoapp.client\\layout\\tasklist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2A3EF2AA-D5FB-4191-B195-EF15793F4359}|ToDoApp.Client.csproj|solutionrelative:layout\\tasklist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A3EF2AA-D5FB-4191-B195-EF15793F4359}|ToDoApp.Client.csproj|d:\\user\\pablo\\documentos\\github\\todoapp\\todoapp.client\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2A3EF2AA-D5FB-4191-B195-EF15793F4359}|ToDoApp.Client.csproj|solutionrelative:layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A3EF2AA-D5FB-4191-B195-EF15793F4359}|ToDoApp.Client.csproj|d:\\user\\pablo\\documentos\\github\\todoapp\\todoapp.client\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2A3EF2AA-D5FB-4191-B195-EF15793F4359}|ToDoApp.Client.csproj|solutionrelative:app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A3EF2AA-D5FB-4191-B195-EF15793F4359}|ToDoApp.Client.csproj|d:\\user\\pablo\\documentos\\github\\todoapp\\todoapp.client\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2A3EF2AA-D5FB-4191-B195-EF15793F4359}|ToDoApp.Client.csproj|solutionrelative:_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A3EF2AA-D5FB-4191-B195-EF15793F4359}|ToDoApp.Client.csproj|d:\\user\\pablo\\documentos\\github\\todoapp\\todoapp.client\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2A3EF2AA-D5FB-4191-B195-EF15793F4359}|ToDoApp.Client.csproj|solutionrelative:wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A3EF2AA-D5FB-4191-B195-EF15793F4359}|ToDoApp.Client.csproj|d:\\user\\pablo\\documentos\\github\\todoapp\\todoapp.client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A3EF2AA-D5FB-4191-B195-EF15793F4359}|ToDoApp.Client.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A3EF2AA-D5FB-4191-B195-EF15793F4359}|ToDoApp.Client.csproj|d:\\user\\pablo\\documentos\\github\\todoapp\\todoapp.client\\todoapp.client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{2A3EF2AA-D5FB-4191-B195-EF15793F4359}|ToDoApp.Client.csproj|solutionrelative:todoapp.client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TaskForm.razor",
+              "DocumentMoniker": "D:\\User\\Pablo\\Documentos\\Github\\ToDoApp\\ToDoApp.Client\\Layout\\TaskForm.razor",
+              "RelativeDocumentMoniker": "Layout\\TaskForm.razor",
+              "ToolTip": "D:\\User\\Pablo\\Documentos\\Github\\ToDoApp\\ToDoApp.Client\\Layout\\TaskForm.razor",
+              "RelativeToolTip": "Layout\\TaskForm.razor",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAswCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-08T03:01:45.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TaskItem.razor",
+              "DocumentMoniker": "D:\\User\\Pablo\\Documentos\\Github\\ToDoApp\\ToDoApp.Client\\Layout\\TaskItem.razor",
+              "RelativeDocumentMoniker": "Layout\\TaskItem.razor",
+              "ToolTip": "D:\\User\\Pablo\\Documentos\\Github\\ToDoApp\\ToDoApp.Client\\Layout\\TaskItem.razor",
+              "RelativeToolTip": "Layout\\TaskItem.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-08T03:01:40.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TaskList.razor",
+              "DocumentMoniker": "D:\\User\\Pablo\\Documentos\\Github\\ToDoApp\\ToDoApp.Client\\Layout\\TaskList.razor",
+              "RelativeDocumentMoniker": "Layout\\TaskList.razor",
+              "ToolTip": "D:\\User\\Pablo\\Documentos\\Github\\ToDoApp\\ToDoApp.Client\\Layout\\TaskList.razor",
+              "RelativeToolTip": "Layout\\TaskList.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-08T03:01:31.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "index.html",
+              "DocumentMoniker": "D:\\User\\Pablo\\Documentos\\Github\\ToDoApp\\ToDoApp.Client\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "wwwroot\\index.html",
+              "ToolTip": "D:\\User\\Pablo\\Documentos\\Github\\ToDoApp\\ToDoApp.Client\\wwwroot\\index.html",
+              "RelativeToolTip": "wwwroot\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-01-08T02:45:21.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "D:\\User\\Pablo\\Documentos\\Github\\ToDoApp\\ToDoApp.Client\\_Imports.razor",
+              "RelativeDocumentMoniker": "_Imports.razor",
+              "ToolTip": "D:\\User\\Pablo\\Documentos\\Github\\ToDoApp\\ToDoApp.Client\\_Imports.razor",
+              "RelativeToolTip": "_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-08T02:44:54.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "D:\\User\\Pablo\\Documentos\\Github\\ToDoApp\\ToDoApp.Client\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Layout\\MainLayout.razor",
+              "ToolTip": "D:\\User\\Pablo\\Documentos\\Github\\ToDoApp\\ToDoApp.Client\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-08T02:17:57.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.razor",
+              "DocumentMoniker": "D:\\User\\Pablo\\Documentos\\Github\\ToDoApp\\ToDoApp.Client\\App.razor",
+              "RelativeDocumentMoniker": "App.razor",
+              "ToolTip": "D:\\User\\Pablo\\Documentos\\Github\\ToDoApp\\ToDoApp.Client\\App.razor",
+              "RelativeToolTip": "App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-08T02:17:42.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ToDoApp.Client.csproj",
+              "DocumentMoniker": "D:\\User\\Pablo\\Documentos\\Github\\ToDoApp\\ToDoApp.Client\\ToDoApp.Client.csproj",
+              "RelativeDocumentMoniker": "ToDoApp.Client.csproj",
+              "ToolTip": "D:\\User\\Pablo\\Documentos\\Github\\ToDoApp\\ToDoApp.Client\\ToDoApp.Client.csproj",
+              "RelativeToolTip": "ToDoApp.Client.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-08T02:17:28.203Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.razor",
+              "DocumentMoniker": "D:\\User\\Pablo\\Documentos\\Github\\ToDoApp\\ToDoApp.Client\\Pages\\Index.razor",
+              "RelativeDocumentMoniker": "Pages\\Index.razor",
+              "ToolTip": "D:\\User\\Pablo\\Documentos\\Github\\ToDoApp\\ToDoApp.Client\\Pages\\Index.razor",
+              "RelativeToolTip": "Pages\\Index.razor",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-08T02:17:22.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\User\\Pablo\\Documentos\\Github\\ToDoApp\\ToDoApp.Client\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\User\\Pablo\\Documentos\\Github\\ToDoApp\\ToDoApp.Client\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T02:16:43.454Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+D:\User\Pablo\Documentos\Github\ToDoApp\ToDoApp.Client\publish\emcc-props.json
+D:\User\Pablo\Documentos\Github\ToDoApp\ToDoApp.Client\publish\web.config

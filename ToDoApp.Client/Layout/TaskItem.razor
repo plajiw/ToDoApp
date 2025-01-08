@@ -1,0 +1,64 @@
+﻿@using ToDoApp.Client.Pages
+@using static ToDoApp.Client.Pages.Index
+
+<li class="task-item">
+    @if (IsEditing)
+    {
+        <input class="form-control task-input" @bind="Task.Title" />
+        <button class="btn btn-success btn-sm" @onclick="SaveEdit">Salvar</button>
+        <button class="btn btn-secondary btn-sm" @onclick="CancelEdit">Cancelar</button>
+    }
+    else
+    {
+        <span>@Task.Title</span>
+        <div>
+            <button class="btn btn-warning btn-sm" @onclick="EnableEdit">Editar</button>
+            <button class="btn btn-danger btn-sm" @onclick="RemoveTask">Remover</button>
+        </div>
+    }
+</li>
+
+@code {
+    // Tarefa atual
+    [Parameter] public TodoItem Task { get; set; } = null!;
+
+    // Eventos para atualizar e deletar tarefas
+    [Parameter] public EventCallback<TodoItem> UpdateTask { get; set; }
+    [Parameter] public EventCallback<int> DeleteTask { get; set; }
+
+    // Estado de edição
+    private bool IsEditing = false;
+
+    /// <summary>
+    /// Habilita o modo de edição para esta tarefa.
+    /// </summary>
+    private void EnableEdit()
+    {
+        IsEditing = true;
+    }
+
+    /// <summary>
+    /// Cancela o modo de edição.
+    /// </summary>
+    private void CancelEdit()
+    {
+        IsEditing = false;
+    }
+
+    /// <summary>
+    /// Salva as alterações feitas na tarefa.
+    /// </summary>
+    private async Task SaveEdit()
+    {
+        await UpdateTask.InvokeAsync(Task);
+        IsEditing = false;
+    }
+
+    /// <summary>
+    /// Remove a tarefa chamando o evento DeleteTask.
+    /// </summary>
+    private async Task RemoveTask()
+    {
+        await DeleteTask.InvokeAsync(Task.Id);
+    }
+}

@@ -1,0 +1,18 @@
+﻿@using ToDoApp.Client.Pages
+@using static ToDoApp.Client.Pages.Index
+
+<ul class="task-list">
+    @foreach (var task in Tasks)
+    {
+        <TaskItem Task="task" UpdateTask="UpdateTask" DeleteTask="DeleteTask" />
+    }
+</ul>
+
+@code {
+    // Lista de tarefas a serem exibidas
+    [Parameter] public List<TodoItem> Tasks { get; set; } = new();
+
+    // Eventos para atualizar e deletar tarefas
+    [Parameter] public EventCallback<TodoItem> UpdateTask { get; set; }
+    [Parameter] public EventCallback<int> DeleteTask { get; set; }
+}
